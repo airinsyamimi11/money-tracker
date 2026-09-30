@@ -323,3 +323,16 @@ footer a,
 /* Pagination */
 .pagination .page-link { color: var(--wt-blue); border-color: var(--bs-border-color); }
 .pagination .active .page-link { background: var(--wt-blue); border-color: var(--wt-blue); color: #fff; }
+
+/*************** Planner and Income ***************/
+
+/* Plan page */
+.wt-seg { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-bottom: 1.5rem; }
+.wt-seg span { color: var(--wt-muted); font-weight: 500; margin-right: .3rem; }
+.wt-seg a {
+  padding: .35rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--wt-blue);
+  color: var(--wt-blue); text-decoration: none; font-weight: 600;
+}
+.wt-seg a:hover { background: var(--wt-ice); }
+.wt-seg a.active { background: var(--wt-blue); color: var(--wt-cream); }
+.wt-cat .wt-bar.over > span { background: var(--wt-bad); }

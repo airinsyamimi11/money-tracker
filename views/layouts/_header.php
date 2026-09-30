@@ -14,26 +14,20 @@ $items = [
         'url' => ['/site/index'],
     ],
     [
+        'label' => 'My Plan',
+        'url' => ['/plan/index'],
+    ],
+    [
+        'label' => 'Income',
+        'url' => ['/income/index'],
+    ],
+    [
         'label' => 'Expenses',
         'url' => ['/expense/index'],
     ],
     [
         'label' => 'Budget',
         'url' => ['/budget/index'],
-    ],
-    [
-        'label' => 'Login',
-        'url' => ['/site/login'],
-        'visible' => Yii::$app->user->isGuest,
-    ],
-    [
-        'label' => 'Logout (' . Html::encode(Yii::$app->user->identity?->username ?? '') . ')',
-        'url' => ['/site/logout'],
-        'linkOptions' => [
-            'data-method' => 'post',
-            'class' => 'nav-link logout',
-        ],
-        'visible' => !Yii::$app->user->isGuest,
     ],
 ];
 
