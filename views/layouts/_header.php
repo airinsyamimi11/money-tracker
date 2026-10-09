@@ -13,23 +13,28 @@ $loggedIn = !Yii::$app->user->isGuest;
 $items = [
     [
         'label' => 'Dashboard',
-        'url' => ['/site/index'], 'visible' => $loggedIn,
+        'url' => ['/site/index'],
+        'visible' => $loggedIn,
     ],
     [
         'label' => 'My Plan',
-        'url' => ['/plan/index'], 'visible' => $loggedIn,
+        'url' => ['/plan/index'],
+        'visible' => $loggedIn,
     ],
     [
         'label' => 'Income',
-        'url' => ['/income/index'], 'visible' => $loggedIn,
+        'url' => ['/income/index'],
+        'visible' => $loggedIn,
     ],
     [
         'label' => 'Expenses',
-        'url' => ['/expense/index'], 'visible' => $loggedIn,
+        'url' => ['/expense/index'],
+        'visible' => $loggedIn,
     ],
     [
         'label' => 'Budget',
-        'url' => ['/budget/index'], 'visible' => $loggedIn,
+        'url' => ['/budget/index'],
+        'visible' => $loggedIn,
     ],
 ];
 
@@ -52,9 +57,9 @@ $items = [
 
     <?php if ($loggedIn): ?>
         <div class="d-flex align-items-center mt-2 mt-md-0">
-            <span class="nav-user">Hi, <?= Html::encode(Yii::$app->user->identity->username) ?></span>
+            <span class="text-white-50 me-3">Hi, <?= Html::encode(Yii::$app->user->identity->username) ?></span>
             <?= Html::beginForm(['/site/logout'], 'post') ?>
-            <?= Html::submitButton('Logout', ['class' => 'btn-logout']) ?>
+            <?= Html::submitButton('Logout', ['class' => 'btn btn-outline-light rounded-pill px-3']) ?>
             <?= Html::endForm() ?>
         </div>
     <?php endif; ?>
