@@ -336,3 +336,26 @@ footer a,
 .wt-seg a:hover { background: var(--wt-ice); }
 .wt-seg a.active { background: var(--wt-blue); color: var(--wt-cream); }
 .wt-cat .wt-bar.over > span { background: var(--wt-bad); }
+
+/*************** Logout button ***************/
+
+/* Logout button in the navbar */
+.navbar .btn-logout {
+    background: transparent;
+    color: var(--wt-cream);
+    cursor: pointer;
+    border: 1.5px solid var(--wt-ice);
+    border-radius: 999px;
+    padding: .35rem 1.1rem;
+    font-weight: 600;
+}
+.navbar .btn-logout:hover {
+    background: var(--wt-ice);
+    color: var(--wt-blue);
+}
+.navbar .nav-user {
+    color: var(--wt-ice);
+    margin-right: .9rem;
+    font-size: .9rem;
+}
+

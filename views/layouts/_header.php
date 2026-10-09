@@ -8,26 +8,28 @@ use yii\bootstrap5\Nav;
 use yii\bootstrap5\NavBar;
 use yii\helpers\Html;
 
+$loggedIn = !Yii::$app->user->isGuest;
+
 $items = [
     [
         'label' => 'Dashboard',
-        'url' => ['/site/index'],
+        'url' => ['/site/index'], 'visible' => $loggedIn,
     ],
     [
         'label' => 'My Plan',
-        'url' => ['/plan/index'],
+        'url' => ['/plan/index'], 'visible' => $loggedIn,
     ],
     [
         'label' => 'Income',
-        'url' => ['/income/index'],
+        'url' => ['/income/index'], 'visible' => $loggedIn,
     ],
     [
         'label' => 'Expenses',
-        'url' => ['/expense/index'],
+        'url' => ['/expense/index'], 'visible' => $loggedIn,
     ],
     [
         'label' => 'Budget',
-        'url' => ['/budget/index'],
+        'url' => ['/budget/index'], 'visible' => $loggedIn,
     ],
 ];
 
@@ -47,5 +49,14 @@ $items = [
             'items' => $items,
         ],
     ) ?>
+
+    <?php if ($loggedIn): ?>
+        <div class="d-flex align-items-center mt-2 mt-md-0">
+            <span class="nav-user">Hi, <? Html::encode(Yii::$app->user->identity->username) ?></span>
+            <?= Html::beginForm(['/site/logout'], 'post') ?>
+            <?= Html::submitButton('Logout', ['class' => 'btn-logout']) ?>
+            <?= Html::endForm() ?>
+        </div>
+    <?php endif; ?>
     <?php NavBar::end() ?>
 </header>
