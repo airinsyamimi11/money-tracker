@@ -52,7 +52,7 @@ $items = [
 
     <?php if ($loggedIn): ?>
         <div class="d-flex align-items-center mt-2 mt-md-0">
-            <span class="nav-user">Hi, <? Html::encode(Yii::$app->user->identity->username) ?></span>
+            <span class="nav-user">Hi, <?= Html::encode(Yii::$app->user->identity->username) ?></span>
             <?= Html::beginForm(['/site/logout'], 'post') ?>
             <?= Html::submitButton('Logout', ['class' => 'btn-logout']) ?>
             <?= Html::endForm() ?>
